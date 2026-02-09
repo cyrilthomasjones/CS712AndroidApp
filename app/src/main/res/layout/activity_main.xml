@@ -12,7 +12,7 @@
         android:id="@+id/openSecondImplicitBtn"
         android:layout_width="315dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="332dp"
         android:text="Start Activity Implicitly"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +22,10 @@
         android:id="@+id/openSecondExplicitBtn"
         android:layout_width="315dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="404dp"
+        android:layout_marginBottom="412dp"
         android:text="Start Activity Explicitly"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
