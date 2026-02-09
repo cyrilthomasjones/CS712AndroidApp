@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnExplicit, btnImplicit;
+    Button openSecondExplicitBtn, openSecondImplicitBtn;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +28,17 @@ public class MainActivity extends AppCompatActivity {
             });
 
             // Button initialization
-            btnExplicit = findViewById(R.id.btnExplicit);
-            btnImplicit = findViewById(R.id.btnImplicit);
+            openSecondExplicitBtn = findViewById(R.id.openSecondExplicitBtn);
+            openSecondImplicitBtn = findViewById(R.id.openSecondImplicitBtn);
 
             // Explicit Intent (Open SecondActivity directly)
-            btnExplicit.setOnClickListener(v -> {
+            openSecondExplicitBtn.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
             });
 
             // Implicit Intent (Open SecondActivity via action string)
-            btnImplicit.setOnClickListener(v -> {
+            openSecondImplicitBtn.setOnClickListener(v -> {
                 Intent intent = new Intent("com.example.assignment2app.SECOND_ACTIVITY");
                 startActivity(intent);
             });

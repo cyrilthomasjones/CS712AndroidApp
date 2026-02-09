@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SecondActivity extends AppCompatActivity {
 
-    Button btnMain;
+    Button mainBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,10 @@ public class SecondActivity extends AppCompatActivity {
         });
 
         // Button initialization
-        btnMain = findViewById(R.id.btnMain);
+        mainBtn = findViewById(R.id.mainBtn);
 
         // Button to go back to MainActivity
-        btnMain.setOnClickListener(v -> {
+        mainBtn.setOnClickListener(v -> {
             Intent intent = new Intent(SecondActivity.this, MainActivity.class);
             startActivity(intent);
         });
