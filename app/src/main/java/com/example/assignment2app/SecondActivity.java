@@ -3,6 +3,7 @@ package com.example.assignment2app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,13 @@ public class SecondActivity extends AppCompatActivity {
         // UI setup
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_second);
+        String source = getIntent().getStringExtra("launchSource");
+        TextView tvLaunchSource = findViewById(R.id.tvLaunchSource);
+
+        if (source != null) {
+            tvLaunchSource.setText("Opened via: " + source);
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
