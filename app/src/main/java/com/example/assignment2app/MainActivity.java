@@ -21,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button openSecondExplicitBtn, openSecondImplicitBtn, backgroundMonitorButton, btnBroadcast;
+    Button openSecondExplicitBtn, openSecondImplicitBtn, backgroundMonitorButton, btnBroadcast, btnImageActivity;
     MyBroadcastReceiver receiver;
 
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         openSecondImplicitBtn = findViewById(R.id.openSecondImplicitBtn);
         backgroundMonitorButton = findViewById(R.id.btnService);
         btnBroadcast = findViewById(R.id.btnBroadcast);
+        btnImageActivity = findViewById(R.id.btnImageActivity);
+
 
         // Insets safe area
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -75,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent("com.cyril.MY_ACTION");
             intent.setPackage(getPackageName()); // REQUIRED for Android 13+
             sendBroadcast(intent);
+        });
+
+        //Open
+        btnImageActivity.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+            startActivity(intent);
         });
 
         // Dynamic Broadcast Receiver

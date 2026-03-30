@@ -1,19 +1,20 @@
 # Assignment2App
 
-A simple Android application demonstrating activity navigation, foreground services, and dynamic broadcast communication.
+A simple Android application demonstrating activity navigation, camera integration, foreground services, and dynamic broadcast communication.
 
 ---
 
 ## Features
 
-* Two-activity Android application
-* Navigation using explicit intents
-* Navigation using implicit intents (custom action)
+* Multi-activity Android application (Main, Second, Third Activity)
+* Navigation using explicit and implicit intents
 * Passing data between activities
 * Foreground service with notification
 * Dynamic broadcast receiver
-* Display of mobile software engineering challenges
-* Clean and simple user interface
+* Camera integration (capture and display image)
+* Image preview with visible border before and after capture
+* Navigation back to main screen from camera activity
+* Clean and user-friendly interface
 
 ---
 
@@ -29,6 +30,7 @@ A simple Android application demonstrating activity navigation, foreground servi
 * Starts a foreground service
 * Sends a custom internal broadcast
 * Dynamically registers and unregisters a broadcast receiver
+* Navigates to camera functionality (ThirdActivity)
 
 ---
 
@@ -37,6 +39,17 @@ A simple Android application demonstrating activity navigation, foreground servi
 * Displays a list of mobile software engineering challenges
 * Shows how the activity was launched (Explicit or Implicit)
 * Provides navigation back to the main activity
+
+---
+
+### Third Activity (Camera Feature)
+
+* Launches device camera using intent
+* Captures image using system camera app
+* Displays captured image inside an ImageView
+* Shows a visible border around the image (before and after capture)
+* Includes a button to return back to MainActivity
+* Handles runtime camera permissions
 
 ---
 
@@ -61,6 +74,7 @@ A simple Android application demonstrating activity navigation, foreground servi
 * Java
 * Android Studio
 * Android SDK (API 24+)
+* ConstraintLayout
 
 ---
 
@@ -90,7 +104,14 @@ git clone <repository-url>
 
 * Android Studio (latest version recommended)
 * Android SDK API 24+
-* Emulator or Android device
+* Emulator or Android device (real device recommended for camera testing)
+
+---
+
+## Notes
+
+* Camera functionality may behave differently on emulators depending on system configuration.
+* A physical Android device is recommended for reliable camera testing.
 
 ---
 
