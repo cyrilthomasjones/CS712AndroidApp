@@ -1,7 +1,7 @@
 # Assignment2App
 
 A hands-on Android application built as part of Mobile Software Engineering coursework.  
-This app demonstrates core Android concepts including activity navigation, camera usage, background services, and broadcast communication in a simple and practical way.
+This app demonstrates core Android concepts including activity navigation, camera usage, custom permissions, background services, and broadcast communication in a simple and practical way.
 
 ---
 
@@ -14,6 +14,9 @@ This app demonstrates core Android concepts including activity navigation, camer
 - Dynamic broadcast receiver implementation
 - Camera integration (capture and display image)
 - Image preview with a visible border (before and after capture)
+- Custom dangerous permission implementation
+- Runtime permission request handling
+- Protected exported activity using custom permission
 - Navigation back to main screen from camera activity
 - Clean and user-friendly interface
 
@@ -26,6 +29,8 @@ This app demonstrates core Android concepts including activity navigation, camer
 - Launches SecondActivity using:
     - Explicit intent
     - Implicit intent (custom action string)
+- Requests custom runtime permission (`MSE712`)
+- Checks permission before opening protected activity
 - Starts a foreground service
 - Sends a custom internal broadcast
 - Dynamically registers and unregisters a broadcast receiver
@@ -36,6 +41,7 @@ This app demonstrates core Android concepts including activity navigation, camer
 ### 🔹 SecondActivity
 - Displays a list of mobile software engineering challenges
 - Shows how the activity was launched (Explicit or Implicit)
+- Exported and protected using a custom dangerous permission
 - Provides navigation back to the main activity
 
 ---
@@ -50,43 +56,9 @@ This app demonstrates core Android concepts including activity navigation, camer
 
 ---
 
-## ⚙️ Background Components
+## 🔐 Custom Permission (Assignment 7)
 
-### 🔸 Foreground Service
-- Runs as a foreground service
-- Displays a persistent notification when started
-- Implements notification channel and Android 14 foreground service requirements
+The application implements a custom dangerous permission:
 
----
-
-### 🔸 Broadcast Receiver
-- Dynamically registered in MainActivity
-- Listens for a custom internal action
-- Displays a Toast message when a broadcast is received
-
----
-
-## 🧠 Mobile Engineering Challenges Covered
-
-- Device fragmentation
-- Battery optimization
-- Security and privacy
-- Network connectivity
-- Performance optimization
-
----
-
-## 🛠️ Technologies Used
-
-- Java
-- Android Studio
-- Android SDK (API 24+)
-- ConstraintLayout
-
----
-
-## ▶️ Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repository-url>
+```xml
+com.example.assignment2app.MSE712
